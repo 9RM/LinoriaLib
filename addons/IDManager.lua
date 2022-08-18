@@ -194,7 +194,7 @@ local IDManager = {} do
 	function IDManager:BuildConfigSection(tab)
 		assert(self.Library, 'Must set IDManager.Library')
 
-		local section = tab:AddRightGroupbox('Configuration')
+		local section = tab:AddRightGroupbox('Asset ID Manager')
 
 		section:AddDropdown('IDManager_ConfigList', { Text = 'ID list', Values = self:RefreshConfigList(), AllowNull = true })
 		section:AddInput('IDManager_ConfigName',    { Text = 'ID name' })
