@@ -183,10 +183,10 @@ local IDManager = {} do
 
 			local success, err = self:Load(name)
 			if not success then
-				return self.Library:Notify('Failed to load autoload config: ' .. err)
+				return self.Library:Notify('Failed to load autoload ID: ' .. err)
 			end
 
-			self.Library:Notify(string.format('Auto loaded config %q', name))
+			self.Library:Notify(string.format('Auto loaded ID %q', name))
 		end
 	end
 
@@ -226,7 +226,7 @@ local IDManager = {} do
 				return self.Library:Notify('Failed to load ID: ' .. err)
 			end
 
-			self.Library:Notify(string.format('Loaded config %q', name))
+			self.Library:Notify(string.format('Loaded ID %q', name))
 		end)
 
 		section:AddButton('Overwrite ID', function()
