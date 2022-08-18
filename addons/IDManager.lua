@@ -228,17 +228,6 @@ local IDManager = {} do
 
 			self.Library:Notify(string.format('Loaded ID %q', name))
 		end)
-
-		section:AddButton('Overwrite ID', function()
-			local name = Options.IDManager_ConfigList.Value
-
-			local success, err = self:Save(name)
-			if not success then
-				return self.Library:Notify('Failed to overwrite ID: ' .. err)
-			end
-
-			self.Library:Notify(string.format('Overwrote ID %q', name))
-		end)
 		
 
 		section:AddButton('Refresh ID list', function()
