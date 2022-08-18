@@ -229,7 +229,7 @@ local IDManager = {} do
 			self.Library:Notify(string.format('Loaded config %q', name))
 		end)
 
-		section:AddButton('Overwrite config', function()
+		section:AddButton('Overwrite ID', function()
 			local name = Options.IDManager_ConfigList.Value
 
 			local success, err = self:Save(name)
